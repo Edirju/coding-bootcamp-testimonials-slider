@@ -1,0 +1,184 @@
+
+:root{
+  --DarkBlue: hsl(240, 38%, 20%);
+  --GrayishBlue: hsl(240, 18%, 77%);
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url(./assets/Inter/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Inter';
+}
+
+.image-container{
+  /* border: 1px solid red; */
+  width: 327px;
+  height: 308px;
+  background-image: url(./assets/images/pattern-bg.svg);
+  background-size: contain;
+  text-align: center;
+  padding-top: 30px;
+  margin: 24px auto 0;
+  position: relative;
+  & .image{
+    width: 80%;
+    border-radius: 4px;    
+  }
+  & .arrows-container{
+    background-color: white ;
+    width: 80px;
+    height: 40px; 
+    border-radius: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 0;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
+    & .arrow{
+      cursor: pointer;
+    }
+  }
+}
+
+.text-container{
+  /* border: 1px solid red; */
+  margin-top: 25px;
+  padding-top: 37px;
+  position: relative;
+  & .quotes{
+    width: 60px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    margin: 0 auto;
+  }
+  & .user-testimonial{
+    /* border: 1px solid blue; */
+    width: 311px;
+    margin: 0 auto 19px;
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    text-align: center;
+    color: var(--DarkBlue);
+    font-weight: 300;
+  }
+  & .user-details{
+    & .user-name, .user-degree {
+      font-size: 0.9375rem;
+      text-align: center;
+    }
+    & .user-name{
+      color: var(--DarkBlue);
+    }
+    & .user-degree{
+      color: var(--GrayishBlue);
+    }
+  }
+}
+
+footer{
+  height: 72px;
+  width: 285px;
+  background-image: url(./assets/images/pattern-curve.svg);
+  background-size: cover;
+  position: absolute;
+  bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .image-container{
+    width: 552px;
+    height: 515px;
+    padding-top: 44px;
+    & .arrows-container{
+      width: 112px;
+      height: 56px;
+      padding: 0 24px;
+    }
+  }
+  .text-container{
+    /* border: 1px solid red; */
+    & .user-testimonial{
+      font-size: 1.6rem;
+      line-height: 2rem;
+      width: 450px;
+    }
+    & .user-details{
+      & .user-name, .user-degree{
+        font-size: 1.25rem;
+      }
+    }
+  }
+  footer{
+    width: 610px;
+    height: 151px;
+
+  }
+}
+
+@media (min-width: 1024px) {
+  .testimonial{
+    width: 1297px;
+    height: 665px;
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 50px auto;
+    position: relative;
+  }
+  .image-container{
+    margin: 0;
+    width: 702px;
+    height: 665px;
+    padding-top: 62px;
+    & .arrows-container{
+      margin: unset;
+      left: 140px;
+    }
+  }
+  .text-container{
+    width: 635px;
+    height: 354px;
+    position: absolute;
+    padding-top: 65px;
+    left: 90px;
+    top: 130px;
+    & .quotes{
+      width: 120px;
+      height: 100px;
+      margin: unset;
+      left: 86px;
+    }
+    & .user-testimonial{
+      text-align: left;
+      width: 100%;
+      font-size: 2rem;
+      line-height: 2.75rem;
+      margin-bottom: 32px;
+    }
+    & .user-details{
+      display: flex;
+      gap: 10px;
+    }
+  }
+}
+
+
+
+
+
+
